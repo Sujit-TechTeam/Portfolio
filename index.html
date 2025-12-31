@@ -1,3 +1,1626 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Sujit Dash - Educational Visionary & Chairman</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a237e;
+            --secondary: #283593;
+            --accent: #ff6d00;
+            --light: #f5f7fa;
+            --dark: #1a1a1a;
+            --gray: #5a5a5a;
+            --success: #4caf50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            display: inline-block;
+            position: relative;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            z-index: 2;
+            position: relative;
+            max-width: 600px;
+        }
+        
+        .header-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 45%;
+            background: url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center center;
+            background-size: cover;
+            opacity: 0.15;
+        }
+        
+        .header-content h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            font-weight: 800;
+        }
+        
+        .header-content p {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            opacity: 0.9;
+        }
+        
+        .header-tagline {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-left: 20px;
+            border-left: 3px solid var(--accent);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(255, 109, 0, 0.3);
+        }
+        
+        .btn:hover {
+            background: #ff8500;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 109, 0, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+            box-shadow: none;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: var(--primary);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+        
+        .stat-text {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        
+        .about-img {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .about-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary), transparent);
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .about-text h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        .about-text p {
+            margin-bottom: 25px;
+            color: var(--gray);
+            font-size: 1.05rem;
+        }
+        
+        .signature {
+            margin-top: 30px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        
+        /* Education Section */
+        .education-section {
+            background: linear-gradient(to bottom, #f8fafc, #e6f2ff);
+        }
+        
+        .education-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .education-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .education-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--accent);
+        }
+        
+        .education-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .education-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .education-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .education-card p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        
+        /* Branches Section */
+        .branches-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+       .branch-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    min-height: 420px;
+
+    /* Background image support */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    color: #fff;
+}
+
+/* Dark overlay for readability */
+.branch-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 0;
+}
+
+/* Keep content above overlay */
+.branch-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.branch-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.jajpur {
+    background-image: url("./Images/jajpur.png");
+}
+
+.trisulia {
+    background-image: url("/Images//trisulia.jpeg");
+}
+
+.kidzee {
+    background-image: url("/Images//kidzz.jpeg");
+}
+
+.patia {
+    background-image: url("./Images//mounlitra.jpg");
+}
+
+.phulnakhara {
+    background-image: url("./Images//nakhara.jpg");
+}
+
+.bjb {
+    background-image: url("images/bjb.jpeg");
+}
+
+        
+        .branch-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .branch-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .branch-status {
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        .branch-body {
+            padding: 25px;
+        }
+        
+        .branch-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .branch-info i {
+            color: var(--primary);
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .branch-features {
+            margin-top: 20px;
+        }
+        
+        .branch-features h4 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .features-list {
+            list-style: none;
+        }
+        
+        .features-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .features-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+        
+        .coming-soon {
+            background: var(--accent);
+        }
+        
+        /* Businesses Section */
+        .businesses {
+            background: #f8fafc;
+        }
+        
+        .business-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .business-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .business-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .business-icon {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            font-size: 2.8rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .business-icon::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: translateX(-100%);
+        }
+        
+        .business-card:hover .business-icon::after {
+            animation: shimmer 1.5s ease;
+        }
+        
+        @keyframes shimmer {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        
+        .business-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .business-content h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .business-content p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        .business-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+        }
+        
+        .business-link i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .business-link:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Visiting Card Section */
+        .visiting-card-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .visiting-card-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/diagmonds.png');
+            opacity: 0.05;
+        }
+        
+        .visiting-card-section .section-title h2 {
+            color: white;
+        }
+        
+        .visiting-card-section .section-title h2::after {
+            background: var(--accent);
+        }
+        
+        .card-container {
+            perspective: 1000px;
+            margin-bottom: 50px;
+        }
+        
+        .card-preview {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            max-width: 420px;
+            margin: 0 auto;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            transform-style: preserve-3d;
+            transition: transform 0.8s ease;
+            color: var(--dark);
+        }
+        
+        .card-preview:hover {
+            transform: rotateY(10deg) rotateX(5deg);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/diagmonds.png');
+            opacity: 0.1;
+        }
+        
+        .card-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            position: relative;
+        }
+        
+        .card-header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+            position: relative;
+        }
+        
+        .card-body {
+            padding: 30px;
+            text-align: left;
+            position: relative;
+        }
+        
+        .card-info {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-info i {
+            color: var(--primary);
+            margin-right: 15px;
+            width: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 35px;
+            background: white;
+            color: var(--primary);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .download-btn:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            gap: 60px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        .contact-info p {
+            color: var(--gray);
+            margin-bottom: 40px;
+            font-size: 1.05rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            font-size: 1.3rem;
+            box-shadow: 0 5px 15px rgba(26, 35, 126, 0.2);
+        }
+        
+        .contact-details h4 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+        
+        .contact-details p {
+            color: var(--gray);
+            margin-bottom: 0;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+        
+        .footer-logo h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-logo p {
+            color: #a0aec0;
+            max-width: 300px;
+        }
+        
+        .footer-links h4, .footer-social h4 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: white;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #cbd5e0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a i {
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+        
+        .social-icons a:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a0aec0;
+            font-size: 0.9rem;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 35px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+            font-size: 1rem;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .header-content h1 {
+                font-size: 4rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .contact-content {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .stats-container {
+                flex-wrap: wrap;
+            }
+            
+            .stat-item {
+                flex: 0 0 50%;
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 3.2rem;
+            }
+            
+            .header-content p {
+                font-size: 1.4rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .header-bg {
+                width: 100%;
+                opacity: 0.1;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .header-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .header-content p {
+                font-size: 1.2rem;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .stat-number {
+                font-size: 2.8rem;
+            }
+            
+            .business-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container container">
+            <div class="logo">Mr. Sujit <span>Dash</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#branches">Branches</a></li>
+                <li><a href="#businesses">Businesses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home">
+        <div class="header-bg"></div>
+        <div class="container">
+            <div class="header-content">
+                <h1>Mr. Sujit Dash</h1>
+                <p>Visionary Educationalist & Business Leader</p>
+                <div class="header-tagline">Chairman of Gosain International School & Multiple Business Ventures</div>
+                <div class="header-btns">
+                    <a href="#education" class="btn">Explore Education</a>
+                    <a href="#branches" class="btn btn-outline">View Branches</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">7+</div>
+                    <div class="stat-text">Educational Branches</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-text">Business Ventures</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-text">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-text">Team Members</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="https://staticimage.nyc3.cdn.digitaloceanspaces.com/portfilioimages/Gemini_Generated_Image_umm5oxumm5oxumm5.png" alt=" Mr.Sujit Dash">
+                </div>
+                <div class="about-text">
+                    <h3>Visionary Leader in Education and Business</h3>
+                    <p>Mr. Sujit Dash is a dynamic and forward-thinking educationalist and business leader with a passion for creating impactful institutions that serve communities across Odisha and beyond. With a clear vision to provide quality education and essential services, he has established multiple successful ventures spanning education, real estate, hospitality, and logistics.</p>
+                    <p>As the Chairman of Gosain International School, he oversees multiple branches in strategic locations including Jajpur Town, Chandini Chok-Cuttack, and Trisulia-Cuttack, ensuring that world-class education reaches every corner of the region.</p>
+                    <p>His business philosophy is centered around sustainable growth, community development, and creating opportunities for the next generation of leaders. Through his diverse portfolio of companies, Mr. Dash has created hundreds of jobs and contributed significantly to the local economy.</p>
+                    <div class="signature">Mr.Sujit Dash</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Educational Vision</h2>
+            </div>
+            <div class="section-subtitle">
+                Transforming education through innovation, excellence, and accessibility
+            </div>
+            
+            <div class="education-highlights">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Quality Education</h3>
+                    <p>Providing world-class education with modern teaching methodologies, experienced faculty, and comprehensive curriculum designed to nurture future leaders.</p>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Holistic Development</h3>
+                    <p>Focusing on all-round development of students through academics, sports, arts, and character building activities.</p>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3>Infrastructure Excellence</h3>
+                    <p>State-of-the-art facilities including smart classrooms, science labs, libraries, and sports complexes to support modern education needs.</p>
+                </div>
+            </div>
+            
+            <div class="section-title" style="margin-top: 80px;">
+                <h2>Our Educational Institutions</h2>
+            </div>
+            
+            <div class="branches-container">
+                <!-- GIS Jajpur -->
+                <div class="branch-card jajpur">
+                    <div class="branch-header">
+                        <h3>GIS Jajpur</h3>
+                        <div class="branch-status">Active</div>
+                    </div>
+                    <div class="branch-body">
+                        <div class="branch-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jajpur Town, Odisha</span>
+                        </div>
+                        <div class="branch-info">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9101200800</span>
+                        </div>
+                        <div class="branch-features">
+                            <h4>Key Features</h4>
+                            <ul class="features-list">
+                                <li>CBSE & NEP Curriculum</li>
+                                <li>Smart Classrooms</li>
+                                <li>Science & Computer Labs</li>
+                                <li>Sports Facilities</li>
+                                <li>Transportation Services</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- GIS Trisulia Cuttack -->
+                <div class="branch-card trisulia">
+                    <div class="branch-header">
+                        <h3>GIS Trisulia Cuttack</h3>
+                        <div class="branch-status">Active</div>
+                    </div>
+                    <div class="branch-body">
+                        <div class="branch-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Trisulia, Cuttack, Odisha</span>
+                        </div>
+                        <div class="branch-info">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9201200800</span>
+                        </div>
+                        <div class="branch-features">
+                            <h4>Key Features</h4>
+                            <ul class="features-list">
+                                <li>CBSE & NEP Curriculum</li>
+                                <li>Digital Classrooms</li>
+                                <li>Advanced Science Labs</li>
+                                <li>Art & Music Rooms</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kidzee Trisulia -->
+                <div class="branch-card kidzee">
+                    <div class="branch-header">
+                        <h3>Kidzee Trisulia</h3>
+                        <div class="branch-status">Active</div>
+                    </div>
+                    <div class="branch-body">
+                        <div class="branch-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Trisulia, Cuttack, Odisha</span>
+                        </div>
+                        <div class="branch-info">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9201200800 |+91 9301200800</span>
+                        </div>
+                        <div class="branch-features">
+                            <h4>Key Features</h4>
+                            <ul class="features-list">
+                                <li>Early Childhood Education</li>
+                                <li>Play-Based Learning</li>
+                                <li>Safe & Nurturing Environment</li>
+                                <li>Activity Rooms</li>
+                                <li>Outdoor Play Area</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+             
+                
+                <!-- Mount Litera Zee School Patia -->
+                <div class="branch-card patia">
+                    <div class="branch-header">
+                        <h3>Mount Litera Zee School</h3>
+                        <div class="branch-status">Active</div>
+                    </div>
+                    <div class="branch-body">
+                        <div class="branch-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Patia, Bhubaneswar, Odisha</span>
+                        </div>
+                        <div class="branch-info">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 674 710 1000</span>
+                        </div>
+                        <div class="branch-features">
+                            <h4>Key Features</h4>
+                            <ul class="features-list">
+                                <li>CBSE Curriculum</li>
+                                <li>International Teaching Methods</li>
+                                <li>Advanced Science & Computer Labs</li>
+                                <li>Sports Complex</li>
+                                <li>Art & Performing Arts Center</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Grandawas Phul ankhara -->
+                <div class="branch-card phulnakhara">
+                    <div class="branch-header">
+                        <h3>GIS PhulNakhara</h3>
+                        <div class="branch-status coming-soon">Opening Shortly</div>
+                    </div>
+                    <div class="branch-body">
+                        <div class="branch-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Grandawas PhulNakhara-Cuttack, Odisha</span>
+                        </div>
+                        <div class="branch-info">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Admissions Opening Soon</span>
+                        </div>
+                        <div class="branch-features">
+                            <h4>Planned Features</h4>
+                            <ul class="features-list">
+                                <li>Modern Campus Design</li>
+                                <li>Digital Learning Solutions</li>
+                                <li>Science & Innovation Center</li>
+                                <li>Sports Complex</li>
+                                <li>Auditorium & Arts Center</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Nimapada puri -->
+                <div class="branch-card bjb">
+                    <div class="branch-header">
+                        <h3>GIS BJB Nagar</h3>
+                        <div class="branch-status coming-soon">Opening Shortly</div>
+                    </div>
+                    <div class="branch-body">
+                        <div class="branch-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>BJB NAGAR, Bhubaneswar, Odisha</span>
+                        </div>
+                        <div class="branch-info">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Admissions Opening Soon</span>
+                        </div>
+                        <div class="branch-features">
+                            <h4>Planned Features</h4>
+                            <ul class="features-list">
+                                <li>Spacious Classrooms</li>
+                                <li>Advanced Computer Lab</li>
+                                <li>Library with Digital Access</li>
+                                <li>Playground & Sports Facilities</li>
+                                <li>Activity & Creative Zones</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Businesses Section -->
+<section id="businesses" class="businesses">
+    <div class="container">
+        <div class="section-title">
+            <h2>Business Ventures</h2>
+        </div>
+        <div class="section-subtitle">
+            A diverse portfolio of companies dedicated to excellence and community service
+        </div>
+        <div class="business-grid">
+            <!-- Business 1 -->
+            <div class="business-card">
+                <div class="business-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <div class="business-content">
+                    <h3>Gosain Educational and Charitable Trust</h3>
+                    <p>Dedicated to providing educational opportunities and charitable services to underprivileged communities across Odisha through scholarships, infrastructure development, and community programs.</p>
+                    <a href="#" class="business-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Business 2 -->
+            <div class="business-card">
+                <div class="business-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="business-content">
+                    <h3>Gosain Developers Pvt Ltd</h3>
+                    <p>Leading real estate development company creating residential, commercial, and institutional spaces with modern amenities, sustainable design, and a commitment to quality construction.</p>
+                    <a href="#" class="business-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Business 3 -->
+            <div class="business-card">
+                <div class="business-icon">
+                    <i class="fas fa-hotel"></i>
+                </div>
+                <div class="business-content">
+                    <h3>Gosain Hospitality Pvt Ltd</h3>
+                    <p>Premium hospitality services including hotels, resorts, and event spaces that offer exceptional experiences to guests with a focus on luxury, comfort, and impeccable service.</p>
+                    <a href="#" class="business-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Business 4 -->
+            <div class="business-card">
+                <div class="business-icon">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <div class="business-content">
+                    <h3>Gosain Tax World LLP</h3>
+                    <p>Comprehensive tax consultation and financial advisory services for individuals and businesses with expertise in tax planning, compliance, and financial strategy.</p>
+                    <a href="#" class="business-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Business 5 -->
+            <div class="business-card">
+                <div class="business-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <div class="business-content">
+                    <h3>Gosain Logistics</h3>
+                    <p>Efficient logistics and supply chain solutions serving businesses across multiple sectors with a focus on reliability, timely delivery, and cost-effective transportation services.</p>
+                    <a href="#" class="business-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Business 6 -->
+            <div class="business-card">
+                <div class="business-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="business-content">
+                    <h3>DPS Group</h3>
+                    <p>A global consulting, engineering and construction management company serving high-tech industries worldwide with industry experts in key sectors. Specializing in advanced engineering solutions and project management.</p>
+                    <a href="#" class="business-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Business 7 - NEW TECH SOLUTIONS CARD -->
+            <!-- <div class="business-card">
+                <div class="business-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="business-content">
+                    <h3>Gosain Tech Solutions</h3>
+                    <p>Comprehensive technology solutions provider offering website design, digital marketing, web hosting, and all tech-related services. We deliver cutting-edge digital solutions to help businesses thrive in the digital age.</p>
+                    <a href="#" class="business-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div> -->
+            
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="section-subtitle">
+                Get in touch for collaborations, inquiries, or any information regarding my ventures
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in new opportunities, partnerships, and discussions about education and business development. Feel free to reach out through any of the channels below.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>Gosain International School, 
+                                Metro GreenWood Appartments Trisuli- Cuttack,754005 Odisha, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+91 9101200800 | +91 9201200800 | +91 9301200800</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>chairman@gosaingroup.com</p><p>info@gosaingroup.com</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Mr. Sujit Dash</h3>
+                    <p>Visionary Educationalist & Business Leader dedicated to community development through education and enterprise.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="#education"><i class="fas fa-chevron-right"></i> Education</a></li>
+                        <li><a href="#branches"><i class="fas fa-chevron-right"></i> Branches</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Follow Me</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Mr. Sujit Dash. All Rights Reserved.| Developed By OdiTek Solutions</p> </p>
+                <!-- <p>| Developed By Gosain Tech Solutions</p> -->
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+        
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if(window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+        
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.education-card, .branch-card, .business-card, .about-img, .about-text, .contact-info, .contact-form').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1598,3 +3221,4 @@
     </script>
 </body>
 </html>
+
